@@ -1,8 +1,7 @@
-import React from 'react';
-import Form from './components/Form/index';
-
+import React from 'react'
+import SearchResultContainer from './components/SearchResultContainer'
 function App() {
-  return <Form />;
+    return <SearchResultContainer />
 }
 
-export default App;
+export default App
