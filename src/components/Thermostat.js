@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 
 function Thermostat() {
   // Set the starting temperature
-  const [temp, setTemp] = useState(0);
+  const [temp, setTemp] = useState(80);
 
   // TODO: Use the `useEffect` Hook to set the `document.title` to the current temperature
   // YOUR CODE HERE
