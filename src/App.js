@@ -1,8 +1,8 @@
-import React from "react";
-import OmdbContainer from "./components/OmdbContainer";
+import React from 'react';
+import Thermostat from './components/Thermostat';
 
 function App() {
-  return <OmdbContainer />;
+  return <Thermostat />;
 }
 
 export default App;
