@@ -1,8 +1,10 @@
 import React from "react";
-import Display from "./components/Display";
+// First we import Greeting from the components folder
+import Greeting from "./components/Greeting";
 
+// Our App component returns the Greeting component
 function App() {
-  return <Display />;
+  return <Greeting />;
 }
 
 export default App;
