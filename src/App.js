@@ -1,32 +1,23 @@
-import React, { useState, useEffect } from 'react';
-import SearchBar from './components/SearchBar';
-import IssueList from './components/IssueList';
+import React, { useEffect } from 'react';
+import { StudentProvider } from './utils/StudentContext';
+import StudentList from './components/StudentList';
+import './jass.css';
+import './app.css';
 
 function App() {
-  const [issues, setIssues] = useState([]);
-
+  const title = 'Activity 2: Providers';
   useEffect(() => {
-    document.title = 'GitHub issues';
+    document.title = title;
   }, []);
 
-  const getRepoIssues = (repo) => {
-    let issuesURL = `https://api.github.com/repos/${repo}/issues?direction=asc`;
-    console.log('issuesURL', issuesURL);
-    fetch(issuesURL)
-      .then((res) => res.json())
-      .then((response) => setIssues(response));
-  };
-
   return (
-    <div className="ui container">
-      <SearchBar onFormSubmit={getRepoIssues} />
-      <div className="ui grid">
-        <div className="ui row">
-          <div className="eleven wide column">
-            <IssueList issues={issues} />
-          </div>
-        </div>
-      </div>
+    <div className="app">
+      <h1>22.1 State</h1>
+      <h4 style={{ color: 'lightseagreen' }}>{title}</h4>
+
+      <StudentProvider>
+        <StudentList />
+      </StudentProvider>
     </div>
   );
 }
